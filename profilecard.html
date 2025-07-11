@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Card - Pramod Kumar</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 320px;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .title {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .email {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .show-btn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .show-btn:hover {
+      background-color: #45a049;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+      text-align: left;
+      display: none;
+    }
+
+    .info i {
+      margin-right: 8px;
+      color: #e91e63;
+    }
+
+    .info p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="c:\Users\hp\OneDrive\Pictures\DSC_1391-01.jpeg" alt="Pramod Kumar Photo" class="profile-img" />
+
+    <h2>Pramod kumar</h2>
+    <p class="title">Full Stack Developer</p>
+    <p class="email">pramodkumarnukathoti2@gmail.com</p>
+
+    <button class="show-btn" onclick="toggleInfo()">Show More</button>
+
+    <div class="info" id="extra-info">
+      <p><i class="fas fa-map-marker-alt"></i> Bhimavaram, Andhra Pradesh</p>
+      <p><i class="fas fa-briefcase"></i> Skills: HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById("extra-info");
+      const button = document.querySelector(".show-btn");
+
+      if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+        button.textContent = "Show Less";
+      } else {
+        info.style.display = "none";
+        button.textContent = "Show More";
+      }
+    }
+  </script>
+</body>
+</html>
